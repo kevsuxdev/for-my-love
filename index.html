@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./us.jpg">
+    <link rel="stylesheet" href="style.css" />
+    <title>Happy Valentine's Day</title>
+  </head>
+  <body>
+    <section>
+      <div class="card">
+        <button class="show" id="show">For you</button>
+        <div class="cover" id="cover"></div>
+        <p id="message"></p>
+        <img src="./rose.png" alt="roses" id="rose" onclick="shows()" />
+      </div>
+    </section>
+    <script>
+      const flower = document.getElementById("rose");
+      const coverss = document.getElementById("cover");
+      const message = document.getElementById("message");
+
+      document.getElementById("show").addEventListener("click", () => {
+        setTimeout(() => {
+          flower.classList.add("show-flower");
+          setTimeout(() => {
+            message.innerHTML =
+              `Happy Valentine's Day, my girl!! I am always grateful for having you as my girlfriend and, soon to be, my wife uwu. Always remember that I appreciate everything you've done to make my heart happy, and please take care of yourself as much as I care for you. I love youuu, my love mwaaaa!! &#x1F499`;
+          }, 1000);
+        }, 1000);
+        coverss.classList.add("remove-cover");
+      });
+    </script>
+  </body>
+</html>
